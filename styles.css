@@ -3,6 +3,7 @@ html, body {
     height: 100%; /* Ensure full height */
     margin: 0;
     padding: 0;
+    overflow: hidden; /* Prevent scrollbars */
 }
 
 body {
@@ -96,6 +97,15 @@ section p {
     padding: 0 2rem;
 }
 
+.hero-content h1 {
+    margin-bottom: 0.2em;
+}
+
+.hero-content h2 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
 .hero h1 {
     font-size: 3rem;
 }
@@ -103,6 +113,15 @@ section p {
 .hero p {
     font-size: 1.25rem;
     margin: 1rem 0;
+}
+
+.about-box {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 /* Buttons */
@@ -118,6 +137,12 @@ section p {
 
 .btn:hover {
     background: #ffcc33;
+}
+.btn.linkedin {
+    background: #0077b5; /* LinkedIn Blue */
+}
+.btn.linkedin:hover {
+    background: #005582; /* LinkedIn Darker Blue */
 }
 /* GitHub Section */
 .github-section {
@@ -143,3 +168,64 @@ section p {
     background: #6e7dff; /* GitHub Hover Effect */
 }
 
+/* Sparkle Background */
+#sparkle-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.sparkle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: none;
+    opacity: 0.8;
+    filter: blur(0.5px) brightness(1.7);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.sparkle::before, .sparkle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 1px;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 0 0 6px 2px white;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+.sparkle::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* Optional: Add more rays for a star effect */
+.sparkle.star-4::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.sparkle.star-4::after {
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+@keyframes sparkle-move {
+    0% {
+        opacity: 0.8;
+        transform: scale(1) translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2) translateY(-10px);
+    }
+    100% {
+        opacity: 0.6;
+        transform: scale(1) translateY(0);
+    }
+}
