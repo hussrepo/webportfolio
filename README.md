@@ -1,7 +1,9 @@
 # webportfolio
 See it live: <link>https://alakhrass.net</link>
 
-A portfolio website built with a modern aesthetic design.
+A portfolio website with a modern aesthetic design.
 
 ## Technology Stack:
-HTML/CSS, Javascript
+- HTML
+- CSS 
+- Javascript
