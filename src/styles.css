@@ -90,6 +90,10 @@ body {
         width: 100%;
         text-align: center;
     }
+    .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media (max-width: 600px) {
@@ -149,7 +153,10 @@ header {
             2px 2px 6px #a259ff,
             0 4px 12px rgba(162,89,255,0.5);
     letter-spacing: 1px;
-    transform: perspective(200px) rotateX(8deg);
+    /* transform: perspective(200px) rotateX(8deg); */
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 nav ul {
@@ -193,6 +200,26 @@ section h2, section h3 {
 
 section p {
     margin-bottom: 1rem;
+}
+.project-list {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.project {
+    flex: 1 1 200px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
 /* Hero Section */
@@ -246,7 +273,7 @@ section p {
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background: #f0a500;
+    background: #a259ff;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -254,7 +281,7 @@ section p {
 }
 
 .btn:hover {
-    background: #ffcc33;
+    background: #c18ffa;
 }
 .btn.linkedin {
     background: #0077b5; /* LinkedIn Blue */
@@ -278,12 +305,14 @@ section p {
 }
 
 .github-section .btn {
-    background: #24292f; /* GitHub Dark Gray */
+   /* background: #24292f; /* GitHub Dark Gray */
+    background: #6e7dff;
     color: white;
 }
 
 .github-section .btn:hover {
-    background: #6e7dff; /* GitHub Hover Effect */
+    /* background: #6e7dff; /* GitHub Hover Effect */
+    background: #464fa5;
 }
 
 /* Sparkle Background */
