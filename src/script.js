@@ -40,3 +40,20 @@ function reloadHome(event) {
         sparkleBg.appendChild(sparkle);
     }
 })();
+
+// Hamburger menu functionality
+function setupHamburgerMenu() {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    if (!hamburger || !nav) return;
+    hamburger.addEventListener('click', function() {
+        nav.classList.toggle('open');
+    });
+    // Optional: Close nav when clicking a link (for single-page feel)
+    nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('open');
+        });
+    });
+}
+document.addEventListener('DOMContentLoaded', setupHamburgerMenu);

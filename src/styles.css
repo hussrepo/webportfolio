@@ -12,6 +12,118 @@ body {
     color: white;
     height: 100%;
 }
+.hamburger {
+    display: none; /* Hidden by default, shown in media query */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #000; /* Black background */
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    padding: 0;
+    box-sizing: content-box;
+}
+/* Responsive styles for 900px and 600px breakpoints */
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .about-box {
+        padding: 16px;
+        max-width: 95vw;
+    }
+    .hamburger {
+        display: flex;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: #000; /* Black background */
+        border: none;
+        cursor: pointer;
+        z-index: 1100;
+        padding: 0;
+        box-sizing: content-box;
+    }
+    .hamburger span {
+        display: block;
+        height: 4px;
+        width: 28px;
+        margin: 3px 0; /* Space between lines */
+        background: #fff;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background: rgba(30,30,47,0.98);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    nav.open {
+        display: flex;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+        padding: 1rem 0;
+    }
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .hamburger {
+        width: 32px;
+        height: 32px;
+    }
+    nav ul {
+        gap: 1rem;
+    }
+    header {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+    .logo {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    nav ul {
+        gap: 0.5rem;
+    }
+    section, .hero {
+        padding: 10px;
+        height: auto;
+        min-height: 100vh;
+    }
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.95rem;
+    }
+}
 
 /* Navigation */
 header {
