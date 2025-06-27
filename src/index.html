@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Home</title>
+    <link rel="icon" type="image/png" href="images/icons/website_icon.png">
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
@@ -11,7 +12,10 @@
     <div id="sparkle-bg"></div>
     <!-- Navigation -->
     <header>
-        <div class="logo">Hussein Alakhrass</div>
+        <div class="logo">
+            <img src="images/icons/portfolio_icon.png" alt="Logo" style="height: 2em; width: 2em; vertical-align: middle; margin-right: 0em;">
+            Hussein Alakhrass
+        </div>
         <button class="hamburger" aria-label="Open navigation menu">
             <span></span>
             <span></span>
@@ -19,7 +23,7 @@
         </button>
         <nav>
             <ul>
-                <li><a href="index.html" onclick="return reloadHome(event)">Home</a></li>
+                <li><a href="index.html" class="active" onclick="return reloadHome(event)">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -32,7 +36,7 @@
         <div class="hero-content">
             <h1><span>Hello, I'm Hussein👋</span></h1>
             <p>I'm an aspiring Software Engineer with experience in the IT industry.</p>
-            <a href="projects.html" class="btn">View My Work</a>
+            <a href="projects.html" class="btn">View My Projects</a>
         </div>
     </section>
 
