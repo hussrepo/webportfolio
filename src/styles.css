@@ -38,7 +38,7 @@ body {
     .hero h1 {
         font-size: 2.2rem;
     }
-    .about-box {
+    .box-outline {
         padding: 16px;
         max-width: 95vw;
     }
@@ -93,7 +93,7 @@ body {
         width: 100%;
         text-align: center;
     }
-    .project-list {
+    .aligned-list {
         flex-direction: column;
         align-items: center;
         margin-top: 120px;
@@ -205,7 +205,7 @@ section h2, section h3 {
 section p {
     margin-bottom: 1rem;
 }
-.project-list {
+.aligned-list {
     display: flex;
     gap: 2rem;
     justify-content: center;
@@ -263,7 +263,7 @@ section p {
     margin: 1rem 0;
 }
 
-.about-box {
+.box-outline {
     border: 2px solid #ccc;
     border-radius: 8px;
     padding: 24px;
