@@ -6,24 +6,25 @@ function reloadHome(event) {
     }
 }
 
-// Sparkle background effect
+// Enhanced Sparkle background effect
 (function createSparkles() {
     const sparkleBg = document.getElementById('sparkle-bg');
     if (!sparkleBg) return;
-    const sparkleCount = 50;
+    const sparkleCount = 70; // Increase sparkle count for a denser effect
     for (let i = 0; i < sparkleCount; i++) {
         const sparkle = document.createElement('div');
         sparkle.className = 'sparkle';
-        if (Math.random() < 0.2) sparkle.classList.add('star-4');
+        if (Math.random() < 0.3) sparkle.classList.add('star-4'); // Slightly increase chance of larger sparkles
         // Randomize position, size, blur, and animation duration
-        const size = Math.random() * 2 + 3; // 3px to 5px
+        const size = Math.random() * 2 + 2; // 2px to 4px for smaller sparkles
         const left = Math.random() * 100;
         const top = Math.random() * 100;
-        const blur = Math.random() * 0.7 + 0.3; // 0.3px to 1px
-        const duration = Math.random() * 2 + 3; // 3s to 5s
+        const blur = Math.random() * 1.5 + 0.5; // 0.5px to 2px for softer glow
+        const brightness = Math.random() * 0.5 + 1.5; // 1.5 to 2 for brighter sparkles
+        const duration = Math.random() * 3 + 4; // 4s to 7s for slower animations
         // Randomize floating direction and distance
         const angle = Math.random() * 2 * Math.PI;
-        const distance = Math.random() * 30 + 10; // 10px to 40px
+        const distance = Math.random() * 20 + 10; // 10px to 30px for subtle movement
         const dx = Math.cos(angle) * distance;
         const dy = Math.sin(angle) * distance;
         // Set initial position and style
@@ -31,11 +32,11 @@ function reloadHome(event) {
         sparkle.style.height = `${size}px`;
         sparkle.style.left = `${left}vw`;
         sparkle.style.top = `${top}vh`;
-        sparkle.style.filter = `blur(${blur}px) brightness(1.7)`;
+        sparkle.style.filter = `blur(${blur}px) brightness(${brightness})`;
         sparkle.style.animation = `sparkle-float-${i} ${duration}s ease-in-out infinite alternate`;
         // Create a unique keyframes rule for this sparkle
         const styleSheet = document.styleSheets[0];
-        const keyframes = `@keyframes sparkle-float-${i} {\n  0% { transform: translate(0, 0) scale(1); opacity: 0.8; }\n  50% { transform: translate(${dx}px, ${dy}px) scale(1.2); opacity: 1; }\n  100% { transform: translate(0, 0) scale(1); opacity: 0.7; }\n}`;
+        const keyframes = `@keyframes sparkle-float-${i} {\n  0% { transform: translate(0, 0) scale(1); opacity: 0.9; }\n  50% { transform: translate(${dx}px, ${dy}px) scale(1.3); opacity: 1; }\n  100% { transform: translate(0, 0) scale(1); opacity: 0.8; }\n}`;
         styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
         sparkleBg.appendChild(sparkle);
     }
