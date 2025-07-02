@@ -106,6 +106,9 @@ body {
     .hero-content .box-outline {
         margin-top: 120px;
     }
+    .contact h1 {
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 600px) {
