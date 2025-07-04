@@ -215,7 +215,7 @@ section p {
 .aligned-list {
     display: flex;
     gap: 2rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -223,7 +223,7 @@ section p {
 
 .project {
     flex: 1 1 200px;
-    max-width: 300px;
+    max-width: 350px;
     text-align: center;
 }
 
