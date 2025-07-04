@@ -215,10 +215,14 @@ section p {
 .aligned-list {
     display: flex;
     gap: 2rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
+}
+
+.projects .aligned-list {
+    margin-top: 0.5rem;
 }
 
 .project {
